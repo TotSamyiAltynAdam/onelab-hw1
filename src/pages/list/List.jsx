@@ -21,6 +21,7 @@ const List = () => {
       newData[id].phone = newPhone;
       setData(newData);
       sessionStorage.setItem("users", JSON.stringify(newData));
+      alert('Successfully updated');
     }
 
     const onDelete = (index) => {
@@ -32,15 +33,15 @@ const List = () => {
     return (
       <div className='listPage'>
         <div className="personList">
-          {
-            data.map((person) => (
-              <Person
-                key={person.index}
-                person={person}
-                onEdit={(newName, newSurname, newPhone) => onEdit(person.index, newName, newSurname, newPhone)}
-                onDelete={() => onDelete(person.index)}
-              />
-            ))
+          { data.length > 0 ?
+              data.map((person, i) => (
+                <Person
+                  key={person.index}
+                  person={person}
+                  onEdit={(newName, newSurname, newPhone) => onEdit(i, newName, newSurname, newPhone)}
+                  onDelete={() => onDelete(person.index)}
+                />
+              )) : 'There is empty list'
           }
         </div>
       </div>
