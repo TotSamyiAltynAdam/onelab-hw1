@@ -1,0 +1,23 @@
+.listPage {
+    background-color: gray;
+    height: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.listPage .personList {
+    width: 500px;
+    background-color: white;
+    border-radius: 8px;
+}
+.listPage .personList div{
+    margin-bottom: 10px;
+}
+.listPage .personList div:first-child {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.listPage .personList div:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}

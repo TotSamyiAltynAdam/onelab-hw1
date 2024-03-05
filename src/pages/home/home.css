@@ -1,0 +1,21 @@
+.home {
+    height: 1000px;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home .home-nav {
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+}
+.home .home-nav a {
+    text-decoration: none;
+    color: white;
+}
+.home .home-nav a:hover{
+    color: orange;
+    text-decoration: underline;
+}
